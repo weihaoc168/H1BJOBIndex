@@ -30,13 +30,13 @@
 3. 按月汇总情感,给出建议的政策评分调整量;
 4. 点「应用到模型」,指数、政策评分图与三条外推曲线**全部重算**。
 
-![实时新闻导入](docs/screenshots/01-news-import.png)
+![实时新闻导入](docs/screenshots/01-news-import-dark.png)
 
 **每条都把命中词摊开给你看** —— `−large dollar amount`、`−fixed time period`、`+waiver`。打分不是黑箱,你可以自己判断它是否合理。
 
 按月汇总的情感走势(纵轴自适应):
 
-![情感走势](docs/screenshots/01b-news-chart.png)
+![情感走势](docs/screenshots/01b-news-chart-dark.png)
 
 ### 为什么静态页面能抓到数据
 
@@ -62,17 +62,17 @@ Federal Register API 返回 `access-control-allow-origin: *`,所以浏览器可�
 
 ## 📈 指数与三情景外推
 
-![综合指数](docs/screenshots/02-index.png)
+![综合指数](docs/screenshots/02-index-dark.png)
 
 四大支柱各自成色,权重分别是劳动力市场 30%、政策环境 30%、H-1B 通道 25%、OPT 增长 15%,全部按 2014–2026 区间做 min-max 归一化 —— 指数衡量的是**相对位置**,不是绝对水平。
 
 外推部分按**当天日期自动推进**(每日粒度),把尚未落地的政策作为事件节点,给出基准/乐观/悲观三条路径:
 
-![外推](docs/screenshots/03-projection.png)
+![外推](docs/screenshots/03-projection-dark.png)
 
 配套的情景编辑器可以把任何一个事件切成「已落地 / 已否决」,或直接改冲击数值,模型立刻重算。改动只存在你自己的浏览器里:
 
-![情景编辑](docs/screenshots/05-scenario-editor.png)
+![情景编辑](docs/screenshots/05-scenario-editor-dark.png)
 
 ---
 
@@ -80,11 +80,11 @@ Federal Register API 返回 `access-control-allow-origin: *`,所以浏览器可�
 
 FY2027 起按 OEWS 工资等级加权(Level I=1 票 … Level IV=4 票),美国硕士以上还能进第二个池。计算器按**学位 × 工资等级 × 抽签次数**给出累计中签概率,并附四地(加州 / 德州 / 麻省 / 华盛顿州)的批准量趋势与职业薪资分布:
 
-![H-1B 抽签](docs/screenshots/04-h1b-lottery.png)
+![H-1B 抽签](docs/screenshots/04-h1b-lottery-dark.png)
 
 五个维度的原始数据面板:
 
-![原始数据](docs/screenshots/06-panels.png)
+![原始数据](docs/screenshots/06-panels-dark.png)
 
 ---
 
@@ -92,7 +92,7 @@ FY2027 起按 OEWS 工资等级加权(Level I=1 票 … Level IV=4 票),美国�
 
 每一年按当年实际发生的规则、公告、执法与司法结果打分,范围 −100 到 +100。2017–2020 与 2025–2026 两段负值区间形状不同:前者是执法收紧,后者是结构性规则改写。
 
-![政策评分](docs/screenshots/07-policy-score.png)
+![政策评分](docs/screenshots/07-policy-score-dark.png)
 
 > 截图均为深色模式。主题跟随系统 `prefers-color-scheme`,也可被查看端的显式切换覆盖,浅色配色同样是单独校准过的,不是简单反色。
 
